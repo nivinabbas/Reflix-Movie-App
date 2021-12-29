@@ -1,38 +1,117 @@
-.App {
+body {
+  background-color: rgb(36, 34, 34);
+  color: aliceblue;
+  text-decoration: none;
+  font-family: 'Cinzel Decorative';
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  padding-right: 70%;
+}
+
+.image-container {
+  max-width: 70%;
+  position: relative;
+  /* transition: transform 0.2s; */
+ 
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgb(124, 146, 146);
+  width: 94%;
+  border-radius: 8px;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+#home-container{
+  margin-left: 20vh;
+  margin-right: 20vh;
+
+  display: grid;
+  grid-gap: 50px;
+
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 150px;
+  grid-template-areas: 
+  "N N N N N"
+  "U U U U U"
+  "U U U U U"
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#home-container > div{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  box-shadow: 3px 4px 5px #888888;
+  border-radius: 3px;
+  text-align: center;
+  margin: 20px;
+padding: 20px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#home-container > div:active{
+  border: inset
+}
+.main-directory-text{
+  line-height: 150px;
+  font-size: 2em;
+  color: #e3ecf5;
+  text-align: center;
+
+  text-shadow: -1px -1px 0 #2c3e50, 1px -1px 0 #2c3e50, -1px 1px 0 #2c3e50, 1px 1px 0 #2c3e50;
 }
 
-.App-link {
-  color: #61dafb;
+.logo{
+text-transform: uppercase;
+text-align: right;
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-text{
+  color: #9a9e9b;
+  text-align: center;
 }
+
+.user{
+  grid-area: N U;
+  background-image: url("https://pro2-bar-s3-cdn-cf1.myportfolio.com/dddb0c1b4ab622854dd81280840458d3/92995677ac0aab719760c33c_rw_600.png?h=c453d5442731bca5c02fcc8a4542af57");
+ 
+}
+
+
+#main-links > a{
+ 
+  margin: 50px;
+  color: #c05f11;
+  text-shadow: -1px -1px 0 #e69858, 1px -1px 0 #ffb066, -1px 1px 0 #cf7e48, 1px 1px 0 #c77939;
+  font-size: 50px;
+  
+  
+ 
+}
+
+a{
+  cursor: pointer;
+  color: black;
+}
+
