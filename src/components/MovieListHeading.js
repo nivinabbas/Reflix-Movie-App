@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const MovieListHeading = (props) => {
-    return ( <div className='col'>
-<h1>{props.heading}</h1>
-    </div>);
+class MovieListHeading extends Component {
+  render() {
+    return (
+      <div className="col">
+        <h1>{this.props.heading}</h1>
+      </div>
+    );
+  }
 }
- 
+
 export default MovieListHeading;

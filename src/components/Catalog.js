@@ -52,7 +52,7 @@ const Catalog = (props) => {
   return (
     <div className="container-fluid movie-app">
       <div className="row d-flex align-items-center mt-4 mb-2">
-        <MovieListHeading heading="movies" />
+        <MovieListHeading heading="Movies" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
       <div className="row">
